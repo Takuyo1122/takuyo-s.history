@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俺の歴史</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .timeline {
+            position: relative;
+            width: 60%;
+            padding: 50px 0;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+            transform: translateX(-50%);
+        }
+        .event {
+            position: relative;
+            width: 45%;
+            margin-bottom: 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        .event:hover {
+            transform: scale(1.05);
+        }
+        .event.left {
+            left: 0;
+            text-align: right;
+        }
+        .event.right {
+            left: 55%;
+        }
+        h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="event left">
+            <h3>2008年 - たくよ誕生</h3>
+            <p></p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="event right">
+            <h3>2011年 - 幼稚園生活スタート</h3>
+            <p>くるりカトリック幼稚園</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="event left">
+            <h3>2014年 - 小学校入学</h3>
+            <p>暁星国際小学校入学<br>十年間一緒に授業を受ける仲間たちに会う。そしてがくとも出会う<br><br>最初の何年かはあまり友達ができなかった</p>
+        </div>
+        <br><br><br><br><br> <br><br><br><br><br>
+        <div class="event right">
+            <h3>2019年 - 初めて好きな人ができる</h3>
+            <p>良くも悪くも人生が大きく変わる</p>
+        </div>
+        <br><br>
+        <div class="event left">
+            <h3>2020年 - 人生に春が訪れる</h3>
+            <p>仲のいい友達が指数関数的に増えていく、たくのバブル期</p>
+        </div>
+        <br><br>
+        <div class="event right">
+            <h3>2021年 - 中学校に内部進学</h3>
+            <p>仲良くしていた人は外部進学して、また新たな物語が始まる</p>
+        </div><br>
+        <div class="event left">
+            <h3>2022年 - その初めて好きになった人が転校する。</h3>
+            <p>もうお互い好きじゃなかったけど、悲しかった。</p>
+        </div><br>
+        <div class="event right">
+            <h3>2023年 - ひな現る</h3>
+            <p>前の恋愛とは違って一瞬で物事が進む</p>
+        </div><br><br>
+        <div class="event left">
+            <h3>2024年 - ひなと別れる</h3>
+            <p>4ヶ月とちょっとで別れる</p>
+        </div><br>
+        <div class="event right">
+            <h3>2024年 - 中学卒業</h3>
+            <p>9年間お世話になった学校を卒業する、今思えばいい学校。まあ、過去はいつも美化されるけど。<br>いい友達もいっぱいできた
+            </p>
+        </div><br>
+        <div class="event left">
+            <h3>2024年 - お父さん開業</h3>
+            <p></p>
+        </div><br>
+        <div class="event right">
+            <h3>2024年 - N高等学校入学</h3>
+            <p>いい学校ではあるし授業でやることも最先端、でも集まる人の多くが学ぶことに関心がない。<br>リスペクトできる人が少なく、友達は少ない。<br>セミ孤独<br>早く大学にいきたいと思う毎日</p>
+        </div>
+        <div class="event left">
+            <h3>2025年 - ひな現る（２回目）</h3>
+            <p>ひなは俺と意見が違う時、<br>なぜか意見を一致させようとする。</p>
+        </div>
+    </div>
+</body>
+</html>
