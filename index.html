@@ -42,9 +42,6 @@
             backdrop-filter: blur(10px);
             transition: transform 0.3s ease;
         }
-        .event:hover {
-            transform: scale(1.05);
-        }
         .event.left {
             left: 0;
             text-align: right;
@@ -65,72 +62,80 @@
 </head>
 <body>
     <div class="timeline">
-        <div class="event left">
+        <div class="event left" data-position="left">
             <h3>2008年 - たくよ誕生</h3>
             <p></p>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="event right">
+        <div class="event right" data-position="right">
             <h3>2011年 - 幼稚園生活スタート</h3>
             <p>くるりカトリック幼稚園</p>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="event left">
+        <div class="event left" data-position="left">
             <h3>2014年 - 小学校入学</h3>
             <p>暁星国際小学校入学<br>十年間一緒に授業を受ける仲間たちに会う。そしてがくとも出会う<br><br>最初の何年かはあまり友達ができなかった</p>
         </div>
-        <br><br><br><br><br> <br><br><br><br><br>
-        <div class="event right">
+        <div class="event right" data-position="right">
             <h3>2019年 - 初めて好きな人ができる</h3>
             <p>良くも悪くも人生が大きく変わる</p>
         </div>
-        <br><br>
-        <div class="event left">
+        <div class="event left" data-position="left">
             <h3>2020年 - 人生に春が訪れる</h3>
             <p>仲のいい友達が指数関数的に増えていく、たくのバブル期</p>
         </div>
-        <br><br>
-        <div class="event right">
+        <div class="event right" data-position="right">
             <h3>2021年 - 中学校に内部進学</h3>
             <p>仲良くしていた人は外部進学して、また新たな物語が始まる</p>
-        </div><br>
-        <div class="event left">
+        </div>
+        <div class="event left" data-position="left">
             <h3>2022年 - その初めて好きになった人が転校する。</h3>
             <p>もうお互い好きじゃなかったけど、悲しかった。</p>
-        </div><br>
-        <div class="event right">
+        </div>
+        <div class="event right" data-position="right">
             <h3>2023年 - ひな現る</h3>
             <p>前の恋愛とは違って一瞬で物事が進む</p>
-        </div><br><br>
-        <div class="event left">
+        </div>
+        <div class="event left" data-position="left">
             <h3>2024年 - ひなと別れる</h3>
             <p>4ヶ月とちょっとで別れる</p>
-        </div><br>
-        <div class="event right">
+        </div>
+        <div class="event right" data-position="right">
             <h3>2024年 - 中学卒業</h3>
-            <p>9年間お世話になった学校を卒業する、今思えばいい学校。まあ、過去はいつも美化されるけど。<br>いい友達もいっぱいできた
-            </p>
-        </div><br>
-        <div class="event left">
+            <p>9年間お世話になった学校を卒業する、今思えばいい学校。<br>いい友達もいっぱいできた</p>
+        </div>
+        <div class="event left" data-position="left">
             <h3>2024年 - お父さん開業</h3>
             <p></p>
-        </div><br>
-        <div class="event right">
+        </div>
+        <div class="event right" data-position="right">
             <h3>2024年 - N高等学校入学</h3>
             <p>いい学校ではあるし授業でやることも最先端、でも集まる人の多くが学ぶことに関心がない。<br>リスペクトできる人が少なく、友達は少ない。<br>セミ孤独<br>早く大学にいきたいと思う毎日</p>
         </div>
-        <div class="event left">
+        <div class="event left" data-position="left">
             <h3>2025年 - ひな現る（２回目）</h3>
             <p>ひなは俺と意見が違う時、<br>なぜか意見を一致させようとする。</p>
         </div>
     </div>
+
+    <script>
+        const events = document.querySelectorAll('.event');
+
+        events.forEach(event => {
+            event.addEventListener('mouseenter', function() {
+                // すべてのイベントを小さくする
+                events.forEach(e => {
+                    e.style.transform = 'scale(0.9)';
+                });
+                // ホバーしたイベントを大きくする
+                event.style.transform = 'scale(1.2)';
+            });
+
+            event.addEventListener('mouseleave', function() {
+                // すべてのイベントのサイズを戻す
+                events.forEach(e => {
+                    e.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
